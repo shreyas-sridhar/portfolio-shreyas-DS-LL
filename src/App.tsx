@@ -31,12 +31,11 @@ function App() {
                 <HeadNode />
 
                 {/* About Section */}
-                <Node index={1} id="about">
+                <Node index={1} id="about" nextId="skills">
                     <SectionContent title="About Me">
                         <p className="mb-4">
                             I am a Computer Science undergraduate with a focus on backend development, automation, and system integration.
                             My expertise lies in building robust systems using Rust, Python, Flask, and Java.
-                            I have experience with IEEE publications and hands-on internships.
                         </p>
                         <div>
                             <h3 className="text-xl font-medium text-white mb-2">Education</h3>
@@ -50,13 +49,13 @@ function App() {
                 </Node>
 
                 {/* Skills Section (Node 2) */}
-                <Node index={2} id="skills">
+                <Node index={2} id="skills" nextId="projects">
                     <SectionContent title="Technical Skills">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <h4 className="text-accent text-sm font-mono mb-2">LANGUAGES</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {['Python', 'Rust', 'Java'].map((skill) => (
+                                    {['Python', 'Rust', 'Java', 'C++', 'JavaScript', 'TypeScript'].map((skill) => (
                                         <span key={skill} className="px-3 py-1 bg-surface rounded-full text-sm border border-secondary/20">{skill}</span>
                                     ))}
                                 </div>
@@ -64,7 +63,7 @@ function App() {
                             <div>
                                 <h4 className="text-accent text-sm font-mono mb-2">DATABASES & FRAMEWORKS</h4>
                                 <div className="flex flex-wrap gap-2">
-                                    {['MySQL', 'MongoDB', 'SQLite', 'Flask', 'Vaadin'].map((skill) => (
+                                    {['MySQL', 'MongoDB', 'SQLite', 'Flask', 'Vaadin', 'React', 'Node.js', 'Docker', 'Git'].map((skill) => (
                                         <span key={skill} className="px-3 py-1 bg-surface rounded-full text-sm border border-secondary/20">{skill}</span>
                                     ))}
                                 </div>
@@ -74,25 +73,54 @@ function App() {
                 </Node>
 
                 {/* Projects Section (Node 3 - Reordered, was Experience) */}
-                <Node index={3} id="projects">
+                <Node index={3} id="projects" nextId="experience">
                     <SectionContent title="Projects">
                         <div className="grid gap-6 md:grid-cols-2">
-                            <a href="https://github.com/shreyas-sridhar" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
+                            {/* ETPS */}
+                            <a href="https://github.com/shreyas-sridhar/The-Emergency-Traffic-Prioritization-System" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
                                 <h3 className="text-lg font-medium text-white group-hover:text-accent transition-colors flex items-center justify-between">
-                                    Backend Automation Suite
+                                    ETPS – Traffic Prioritization
                                     <span className="text-xs border border-accent/50 rounded px-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                                 </h3>
+                                <div className="text-xs font-mono text-accent mb-2">Raspberry Pi, Flask, RFID</div>
                                 <p className="text-sm text-secondary mt-1">
-                                    Automated backend workflows using Python and Flask, integrating with various third-party APIs.
+                                    Smart traffic controller prioritizing emergency vehicles. Integrated SQLite DB and live hardware demo (IEEE CONIT 2025).
                                 </p>
                             </a>
-                            <a href="https://github.com/shreyas-sridhar" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
+
+                            {/* RAW Converter */}
+                            <a href="https://github.com/shreyas-sridhar/raw-image-converter" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
                                 <h3 className="text-lg font-medium text-white group-hover:text-accent transition-colors flex items-center justify-between">
-                                    Rust System Integrator
+                                    RAW to JPEG Web App
                                     <span className="text-xs border border-accent/50 rounded px-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                                 </h3>
+                                <div className="text-xs font-mono text-accent mb-2">Python, Flask, Multiprocessing</div>
                                 <p className="text-sm text-secondary mt-1">
-                                    High-performance system integration tool built with Rust for seamless data processing.
+                                    Drag-and-drop RAW image converter. Uses multiprocessing for 40% faster conversion. Deployed on Render.
+                                </p>
+                            </a>
+
+                            {/* Shutdown Timer */}
+                            <a href="https://github.com/shreyas-sridhar/shutdown-app-using-rust" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
+                                <h3 className="text-lg font-medium text-white group-hover:text-accent transition-colors flex items-center justify-between">
+                                    Rust Shutdown Timer
+                                    <span className="text-xs border border-accent/50 rounded px-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                                </h3>
+                                <div className="text-xs font-mono text-accent mb-2">Rust, Slint UI</div>
+                                <p className="text-sm text-secondary mt-1">
+                                    Cross-platform GUI tool to schedule shutdowns on Windows/Linux/macOS. Packaged as MSI installer.
+                                </p>
+                            </a>
+
+                            {/* The HAM */}
+                            <a href="https://github.com/shreyas-sridhar/HAM-Chat" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
+                                <h3 className="text-lg font-medium text-white group-hover:text-accent transition-colors flex items-center justify-between">
+                                    The HAM (P2P Chat) (Under Development)
+                                    <span className="text-xs border border-accent/50 rounded px-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+                                </h3>
+                                <div className="text-xs font-mono text-accent mb-2">Rust, libp2p, Encryption</div>
+                                <p className="text-sm text-secondary mt-1">
+                                    Offline, peer-to-peer encrypted messaging system. Enables communication without internet or central servers.
                                 </p>
                             </a>
                         </div>
@@ -100,7 +128,7 @@ function App() {
                 </Node>
 
                 {/* Experience Section (Node 4 - Moved Down) */}
-                <Node index={4} id="experience">
+                <Node index={4} id="experience" nextId="contact">
                     <SectionContent title="Experience">
                         <div className="space-y-6">
                             <div>
@@ -133,6 +161,10 @@ function App() {
                             <a href="https://www.linkedin.com/in/shreyas-sridhar7/" className="flex items-center space-x-3 text-accent hover:text-white transition-colors" target="_blank" rel="noreferrer">
                                 <span className="font-mono">LinkedIn:</span>
                                 <span>linkedin.com/in/shreyas-sridhar7</span>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1PB-yv5l7BM0X7xEtFASjOTfgVMO_45v0/view?usp=sharing" className="flex items-center space-x-3 text-accent hover:text-white transition-colors" target="_blank" rel="noreferrer">
+                                <span className="font-mono">Resume:</span>
+                                <span>View / Download</span>
                             </a>
                         </div>
                     </SectionContent>

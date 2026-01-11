@@ -6,9 +6,10 @@ interface NodeProps {
     index: number;
     id?: string;
     isLast?: boolean;
+    nextId?: string;
 }
 
-export const Node: React.FC<NodeProps> = ({ children, index, id, isLast }) => {
+export const Node: React.FC<NodeProps> = ({ children, index, id, isLast, nextId }) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -17,6 +18,15 @@ export const Node: React.FC<NodeProps> = ({ children, index, id, isLast }) => {
 
     const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
     const x = useTransform(scrollYProgress, [0, 0.5], [-50, 0]);
+
+    const scrollToNext = () => {
+        if (nextId) {
+            const element = document.getElementById(nextId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 
     return (
         <motion.div
@@ -39,13 +49,24 @@ export const Node: React.FC<NodeProps> = ({ children, index, id, isLast }) => {
 
             {/* Pointer (The "Next" Arrow/Line) */}
             {!isLast && (
-                <div className="flex flex-col items-center h-24 w-full">
+                <div className="flex flex-col items-center h-24 w-full relative">
                     <div className="h-full w-px bg-line relative overflow-hidden">
                         <motion.div
                             className="absolute top-0 left-0 w-full bg-accent"
                             style={{ height: useTransform(scrollYProgress, [0.5, 1], ["0%", "100%"]) }}
                         />
                     </div>
+
+                    {/* Clickable Next Label */}
+                    {nextId && (
+                        <button
+                            onClick={scrollToNext}
+                            className="absolute top-1/2 -translate-y-1/2 bg-background border border-surface px-2 py-1 text-[10px] font-mono text-accent hover:text-white hover:border-accent transition-colors z-20 cursor-pointer"
+                        >
+                            ptr-&gt;next
+                        </button>
+                    )}
+
                     <div className="text-line text-lg -mt-1">↓</div>
                 </div>
             )}
