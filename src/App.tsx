@@ -131,12 +131,14 @@ function App() {
                 <Node index={4} id="experience" nextId="contact">
                     <SectionContent title="Experience">
                         <div className="space-y-6">
-                            <div>
-                                <h3 className="text-xl font-medium text-white">Internship Experience</h3>
-                                <div className="text-accent font-mono text-sm mb-2">Previous Roles</div>
-                                <p className="text-secondary/80">
-                                    Gained hands-on experience in backend development and system architecture during internships.
-                                    Contributed to efficient codebases and learned industry standard practices.
+                            <div className="border-l-2 border-accent pl-4">
+                                <h3 className="text-xl font-medium text-white">Engrav Aviation</h3>
+                                <div className="flex justify-between items-center mb-2">
+                                    <span className="text-accent font-mono text-sm">Software Developer Intern</span>
+                                    <span className="text-xs text-secondary font-mono">Feb 2025 – Jun 2025</span>
+                                </div>
+                                <p className="text-secondary/80 text-sm mb-2">
+                                    Learnt a ton about the proprietary 'StoredObject' framework to handle data which facilitates the flight planning process. Engineered a Core Java pipeline that intercepts live aircraft telemetry and crystallizes it into structured PDF reports, ensuring critical data lands safely.
                                 </p>
                             </div>
                         </div>
