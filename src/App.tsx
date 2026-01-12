@@ -138,7 +138,7 @@ function App() {
                                     <span className="text-xs text-secondary font-mono">Feb 2025 – Jun 2025</span>
                                 </div>
                                 <p className="text-secondary/80 text-sm mb-2">
-                                    Learnt a ton about the proprietary 'StoredObject' framework to handle data which facilitates the flight planning process. Engineered a Core Java pipeline that intercepts live aircraft telemetry and crystallizes it into structured PDF reports, ensuring critical data lands safely.
+                                    Learnt a ton about the proprietary 'StoredObject' framework to handle data which facilitates the flight planning process. Engineered a Core Java pipeline that intercepts live aircraft telemetry and converts it into structured PDF reports, ensuring critical data lands safely, even if its just on a server.
                                 </p>
                             </div>
                         </div>
