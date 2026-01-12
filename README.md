@@ -34,5 +34,8 @@ git clone https://github.com/shreyas-sridhar/portfolio-shreyas-DS-LL
 cd portfolio-shreyas-DS-LL
 
 # 2. Run with Docker
-docker-compose up
+docker-compose up --build
+
+# 3. Visit localhost
+http://localhost:8080/
 ```
