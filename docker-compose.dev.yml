@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  dev:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+      # Prevent host node_modules from overwriting container's
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    # Install dependencies if missing, then start Vite with host access
+    command: sh -c "if [ ! -d node_modules ]; then npm install; fi && npm run dev -- --host"
+    environment:
+      - WATCHPACK_POLLING=true
