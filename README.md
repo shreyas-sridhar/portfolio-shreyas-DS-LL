@@ -14,7 +14,7 @@ A developer portfolio website inspired by the structure and traversal of a singl
 
 ```bash
 # 1. Clone the repo
-https://github.com/shreyas-sridhar/portfolio-shreyas-DS-LL
+git clone https://github.com/shreyas-sridhar/portfolio-shreyas-DS-LL
 cd portfolio-shreyas-DS-LL
 
 # 2. Install dependencies
@@ -30,7 +30,7 @@ Then you need to get the files first:
 
 ```bash
 # 1. Clone the repo
-https://github.com/shreyas-sridhar/portfolio-shreyas-DS-LL
+git clone https://github.com/shreyas-sridhar/portfolio-shreyas-DS-LL
 cd portfolio-shreyas-DS-LL
 
 # 2. Run with Docker
