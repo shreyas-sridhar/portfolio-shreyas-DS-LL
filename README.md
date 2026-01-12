@@ -26,7 +26,7 @@ npm run dev
 
 ### Docker
 Download Docker first if you haven't yet
-Then you need to get the files first:
+Then you need to get the files:
 
 ```bash
 # 1. Clone the repo
