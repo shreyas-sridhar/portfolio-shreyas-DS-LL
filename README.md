@@ -1,5 +1,5 @@
-## Portfolio Website 
-A developer portfolio website inspired by the structure and traversal of a singly linked list, where each section represents a node connected linearly.
+## Portfolio Website
+The portfolio website is inspired by the structure and traversal of a singly linked list, where each node expresses a part of me
 
 ## Tech Stack
 
