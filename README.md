@@ -5,8 +5,6 @@ The portfolio website is inspired by the structure and traversal of a singly lin
 
 *   **Core**: React 18, TypeScript, Vite
 *   **Styling**: Tailwind CSS
-*   **Animation**: Framer Motion
-*   **Icons**: Custom SVG
 
 ## Getting Started
 
