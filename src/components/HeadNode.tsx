@@ -15,7 +15,7 @@ export const HeadNode: React.FC = () => {
                     Shreyas Sridhar
                 </h1>
                 <p className="text-xl text-secondary font-light max-w-lg mx-auto">
-                    Aspiring Backend Developer | System Integration Expert
+                    Aspiring Software Engineer | AI/ML Enthusiast | Backend |  
                 </p>
             </motion.div>
 
