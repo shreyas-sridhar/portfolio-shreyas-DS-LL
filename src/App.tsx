@@ -164,7 +164,7 @@ function App() {
                                 <span className="font-mono">LinkedIn:</span>
                                 <span>linkedin.com/in/shreyas-sridhar7</span>
                             </a>
-                            <a href="https://drive.google.com/file/d/1PB-yv5l7BM0X7xEtFASjOTfgVMO_45v0/view?usp=sharing" className="flex items-center space-x-3 text-accent hover:text-white transition-colors" target="_blank" rel="noreferrer">
+                            <a href="https://drive.google.com/file/d/1-QIrLn1j4laEtySoFHa1XNHg472VGBOO/view?usp=sharing" className="flex items-center space-x-3 text-accent hover:text-white transition-colors" target="_blank" rel="noreferrer">
                                 <span className="font-mono">Resume:</span>
                                 <span>View / Download</span>
                             </a>
