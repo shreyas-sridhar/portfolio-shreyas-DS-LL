@@ -87,6 +87,30 @@ function App() {
                                     Smart traffic controller prioritizing emergency vehicles. Integrated SQLite DB and live hardware demo (IEEE CONIT 2025).
                                 </p>
                             </a>
+                            {/* PostgreSQL RLS Multi-Tenant SaaS */}
+                            <a
+                                href="https://github.com/shreyas-sridhar/postgres-rls-multitenant-saas"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all"
+                            >
+                                <h3 className="text-lg font-medium text-white group-hover:text-accent transition-colors flex items-center justify-between">
+                                    Secure Multi-Tenant SaaS Backend (PostgreSQL RLS)
+                                    <span className="text-xs border border-accent/50 rounded px-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">
+                                        ↗
+                                    </span>
+                                </h3>
+
+                                <div className="text-xs font-mono text-accent mb-2">
+                                    Python, Flask, PostgreSQL, SQLAlchemy, RLS
+                                </div>
+
+                                <p className="text-sm text-secondary mt-1">
+                                    Backend-only SaaS architecture enforcing strict tenant isolation at the database
+                                    layer using PostgreSQL Row Level Security. Prevents cross-tenant data access even
+                                    in the presence of application-layer bugs.
+                                </p>
+                            </a>
 
                             {/* RAW Converter */}
                             <a href="https://github.com/shreyas-sridhar/raw-image-converter" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
@@ -100,17 +124,6 @@ function App() {
                                 </p>
                             </a>
 
-                            {/* Shutdown Timer */}
-                            <a href="https://github.com/shreyas-sridhar/shutdown-app-using-rust" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
-                                <h3 className="text-lg font-medium text-white group-hover:text-accent transition-colors flex items-center justify-between">
-                                    Rust Shutdown Timer
-                                    <span className="text-xs border border-accent/50 rounded px-1 text-accent opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
-                                </h3>
-                                <div className="text-xs font-mono text-accent mb-2">Rust, Slint UI</div>
-                                <p className="text-sm text-secondary mt-1">
-                                    Cross-platform GUI tool to schedule shutdowns on Windows/Linux/macOS. Packaged as MSI installer.
-                                </p>
-                            </a>
 
                             {/* The HAM */}
                             <a href="https://github.com/shreyas-sridhar/HAM-Chat" target="_blank" rel="noreferrer" className="group cursor-pointer block border border-transparent hover:border-surface/50 rounded-lg p-4 -m-4 transition-all">
